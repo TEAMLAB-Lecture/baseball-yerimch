@@ -58,6 +58,8 @@ def is_between_100_and_999(user_input_number):
     # '''
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
+    if not is_digit(three_digit):
+        return True
     result=0
     digit=len(user_input_number)-1
     for num in user_input_number:
@@ -90,6 +92,8 @@ def is_duplicated_number(three_digit):
     # '''
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
+    if not is_digit(three_digit):
+        return True
     for num in three_digit:
         count = three_digit.count(num)
         if count!=1:
@@ -298,7 +302,7 @@ def main():
                     if user_input=='0':
                         EOG=True
                         break
-                    print("WRONG INPUT , Input again")
+                    print("WRONG INPUT, Input again")
                     continue
             if EOG==True:
                 break
@@ -317,7 +321,7 @@ def main():
                     EOG=True
                     break
             else:
-                print("WRONG INPUT , Input again")
+                print("WRONG INPUT, Input again")
                 continue
         if EOG==True:
             break
