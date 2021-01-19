@@ -236,7 +236,7 @@ def is_yes(one_more_input):
         else:
             return False
     elif len(one_more_input)==3:
-        if (one_more_input[0]=='y' or one_more_input[0]=='Y') and (one_more_input[1]=='e' or one_more_input[1]=='E') and (one_more_input[0]=='s' or one_more_input[2]=='S'):
+        if (one_more_input[0]=='y' or one_more_input[0]=='Y') and (one_more_input[1]=='e' or one_more_input[1]=='E') and (one_more_input[2]=='s' or one_more_input[2]=='S'):
             return True
         else:
             return False
