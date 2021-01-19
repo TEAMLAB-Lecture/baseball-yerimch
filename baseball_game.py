@@ -58,8 +58,6 @@ def is_between_100_and_999(user_input_number):
     # '''
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
-    if not is_digit(user_input_number):
-        return True
     result=0
     digit=len(user_input_number)-1
     for num in user_input_number:
@@ -92,8 +90,6 @@ def is_duplicated_number(three_digit):
     # '''
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
-    if not is_digit(three_digit):
-        return True
     for num in three_digit:
         count = three_digit.count(num)
         if count!=1:
@@ -286,8 +282,8 @@ def is_no(one_more_input):
 
 
 def main():
+    print("Play Baseball")
     while True:
-        print("Play Baseball")
         user_input=""
         random_number = str(get_not_duplicated_three_digit_number())
         print("Random Number is : ", random_number)
