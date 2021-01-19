@@ -312,7 +312,7 @@ def main():
         if EOG==True:
             break
         while True:
-            one_more=input("You win, one more(Y/N)?")
+            one_more=input("You win, one more(Y/N) ?")
             if is_yes(one_more) or is_no(one_more):
                 if is_yes(one_more):
                     break
@@ -320,7 +320,7 @@ def main():
                     EOG=True
                     break
             else:
-                print("Wrong Input, Input again")
+                print("WRONG INPUT, Input again")
                 continue
         if EOG==True:
             break
