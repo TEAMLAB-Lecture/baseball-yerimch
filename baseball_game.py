@@ -32,7 +32,7 @@ def is_digit(user_input_number):
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
     for num in user_input_number:
-        if num<'0' or num>'9':
+        if num<str(0) or num>str(9):
             return False
     return True
 
@@ -61,7 +61,7 @@ def is_between_100_and_999(user_input_number):
     result=0
     digit=len(user_input_number)-1
     for num in user_input_number:
-        result+=(int)(num)*(10**digit)
+        result+=((int)(num))*(10**digit)
         digit-=1 
     if result>=100 and result<1000:
         return True
@@ -288,7 +288,8 @@ def main():
     while True:
         print("Play Baseball")
         user_input=""
-        random_number = str(get_not_duplicated_three_digit_number())
+        random_number="694"
+        # random_number = str(get_not_duplicated_three_digit_number())
         print("Random Number is : ", random_number)
         EOG=False
         while True:
@@ -301,7 +302,7 @@ def main():
                     if user_input=='0':
                         EOG=True
                         break
-                    print("Wrong Input, Input again")
+                    print("WRONG INPUT, Input again")
                     continue
             if EOG==True:
                 break
