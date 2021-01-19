@@ -171,7 +171,6 @@ class TestBaseballGame(unittest.TestCase):
                     if input_list[i].isdigit():
                         if int(input_list[i]) < int(target_number):
                             if self.is_duplicated_number(input_list[i]):
-                                print(input_list[i])
                                 self.assertTrue(
                                     "WRONG INPUT" in console[i + 2].upper())
                             else:

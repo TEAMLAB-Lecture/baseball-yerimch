@@ -90,12 +90,9 @@ def is_duplicated_number(three_digit):
     # '''
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
-    for num1 in three_digit:
-        cnt=0
-        for num2 in three_digit:
-            if num1==num2:
-                cnt+=1
-        if cnt!=1:
+    for num in three_digit:
+        count = string.count(num)
+        if count!=1:
             return True
     return False
 
