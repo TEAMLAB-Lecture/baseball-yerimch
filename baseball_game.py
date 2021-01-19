@@ -61,8 +61,8 @@ def is_between_100_and_999(user_input_number):
     result=0
     digit=len(user_input_number)-1
     for num in user_input_number:
-        result+=(int)(num-'0')*(10**digit)
-        digt-=1 
+        result+=(int)(num)*(10**digit)
+        digit-=1 
     if result>=100 and result<1000:
         return True
     return False
@@ -151,15 +151,15 @@ def get_not_duplicated_three_digit_number():
     result = 0
     while True: 
         temp = get_random_number()
-        temp_str = temp / 100 + '0'
+        temp_str = str(int(temp / 100))
         temp %= 100
-        temp_str += temp / 10 + '0'
+        temp_str += str(int(temp / 10))
         temp %= 10
-        temp_str += temp + '0'
-        if is_duplicated_number(temp_str):
+        temp_str +=str(temp)
+        if is_duplicated_number(temp_str)==True:
             continue
         else:
-            result=temp
+            result=temp_str
             break
     # ==================================
     return result
@@ -236,7 +236,7 @@ def is_yes(one_more_input):
         else:
             return False
     elif len(one_more_input)==3:
-        if (one_more_input[0]=='y' or one_more_input[0]=='Y') and (one_more_input[1]=='e' or one_more_input[1]=='E') and (one_more_input[0]=='2' or one_more_input[2]=='S'):
+        if (one_more_input[0]=='y' or one_more_input[0]=='Y') and (one_more_input[1]=='e' or one_more_input[1]=='E') and (one_more_input[0]=='s' or one_more_input[2]=='S'):
             return True
         else:
             return False
@@ -287,12 +287,12 @@ def is_no(one_more_input):
 def main():
     while True:
         print("Play Baseball")
-        user_input = 999
+        user_input=""
         random_number = str(get_not_duplicated_three_digit_number())
         print("Random Number is : ", random_number)
         EOG=False
         while True:
-             while True:
+            while True:
                 user_input=input("Input guess number : ")
                 flag=is_validated_number(user_input)
                 if flag:
@@ -303,12 +303,14 @@ def main():
                         break
                     print("Wrong Input, Input again")
                     continue
-            if EOG:
+            if EOG==True:
                 break
             temp_result=get_strikes_or_ball(user_input, random_number)
             print(f"Strikes : {temp_result[0]} , Balls : {temp_result[1]}")
             if temp_result[0]==3:
                 break
+        if EOG==True:
+            break
         while True:
             one_more=input("You win, one more(Y/N)?")
             if is_yes(one_more) or is_no(one_more):
@@ -317,7 +319,10 @@ def main():
                 else:
                     EOG=True
                     break
-        if EOG:
+            else:
+                print("Wrong Input, Input again")
+                continue
+        if EOG==True:
             break
     print("Thank you for using this program")
     print("End of the Game")
