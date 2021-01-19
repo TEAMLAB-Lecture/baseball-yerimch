@@ -285,8 +285,7 @@ def main():
     while True:
         print("Play Baseball")
         user_input=""
-        random_number="694"
-        # random_number = str(get_not_duplicated_three_digit_number())
+        random_number = str(get_not_duplicated_three_digit_number())
         print("Random Number is : ", random_number)
         EOG=False
         while True:
@@ -297,7 +296,6 @@ def main():
                     break
                 else:
                     if user_input=='0':
-                        print("WRONG INPUT , Input again")
                         EOG=True
                         break
                     print("WRONG INPUT , Input again")
