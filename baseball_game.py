@@ -297,6 +297,7 @@ def main():
                     break
                 else:
                     if user_input=='0':
+                        print("WRONG INPUT , Input again")
                         EOG=True
                         break
                     print("WRONG INPUT , Input again")
