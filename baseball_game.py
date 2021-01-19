@@ -299,7 +299,7 @@ def main():
                     if user_input=='0':
                         EOG=True
                         break
-                    print("WRONG INPUT, Input again")
+                    print("WRONG INPUT , Input again")
                     continue
             if EOG==True:
                 break
@@ -318,7 +318,7 @@ def main():
                     EOG=True
                     break
             else:
-                print("WRONG INPUT, Input again")
+                print("WRONG INPUT , Input again")
                 continue
         if EOG==True:
             break
