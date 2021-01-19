@@ -91,7 +91,7 @@ def is_duplicated_number(three_digit):
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
     for num in three_digit:
-        count = string.count(num)
+        count = three_digit.count(num)
         if count!=1:
             return True
     return False
