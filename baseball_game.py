@@ -58,7 +58,7 @@ def is_between_100_and_999(user_input_number):
     # '''
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
-    if not is_digit(three_digit):
+    if not is_digit(user_input_number):
         return True
     result=0
     digit=len(user_input_number)-1
